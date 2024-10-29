@@ -3,7 +3,7 @@ def limpar_terminal():
     os.system("cls || clear")
 
 def biblioteca():
-    print("""=== Bem vindo à nossa biblioteca ===
+    print("""=== BIBLIOTECA SENAI ===
     1 - Criar cadastro para comprar um livro
     2 - Comprar um livro
     3 - Alugar um livro
@@ -73,9 +73,30 @@ def alugar_um_livro(carrinho_de_livros):
         print(f"\nLivro à ser alugado: {nome}")
         print("Você tem um mês de aluguel. Após esse um mês, você vai pagar uma taxa de R$5,00 por cada semana de atraso")
         carrinho_de_livros.append(nome)
+    else:
+        print("Código do livro inválido!")
 
 def devolucao_de_um_livro():
-    pass
+    livros = {
+    '123': ('Anabele'),
+    '456': ('Chucky'),
+    '789': ('It - A coisa'),
+    '111': ('Diário de um banana'),
+    '112': ('Auto da compadecida'),
+    '113': ('A troca'),
+    '101': ('Romeu e Julieta'),
+    '102': ('Orgulho e preconceito'),
+    '103': ('A culpa é das estrelas'),
+}
+
+    codigo = input("Digite o código do livro que deseja devolver: ")
+    motivo = input("Fale sobre o motivo de sua insatisfação com o livro: ")
+    if codigo in livros:
+        nome = livros[codigo]
+        print(f"\nLivro à ser devolvido: {nome}")
+        print("Agradecemos por ter devolvido ao invés de ter jogado fora. Esse livro vai servir para pessoas de baixa renda")
+    else:
+        print("Código do livro inválido!")
 
 def estoque_de_livro():
     print("""
