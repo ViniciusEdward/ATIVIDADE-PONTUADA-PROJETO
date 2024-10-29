@@ -94,7 +94,7 @@ def devolucao_de_um_livro():
     if codigo in livros:
         nome = livros[codigo]
         print(f"\nLivro à ser devolvido: {nome}")
-        print("Agradecemos por ter devolvido ao invés de ter jogado fora. Esse livro vai servir para pessoas de baixa renda")
+        print("Agradecemos por ter devolvido ao invés de ter jogado fora. Esse livro vai ser doado para pessoas de baixa renda")
     else:
         print("Código do livro inválido!")
 
@@ -113,8 +113,8 @@ def estoque_de_livro():
 
 def exibir_carrinho(carrinho, carrinho_de_livros):
     soma = sum(carrinho)
-    for livro in carrinho_de_livros():
-        print(f"Livros escolhidos: {livro}")
+    for livro in carrinho_de_livros:
+        print(f"\nLivros escolhidos: {livro}")
     print(f"Total à pagar: {soma:.2f}")
 
 limpar_terminal()
@@ -136,6 +136,7 @@ while True:
 
         case '4':
             devolucao_de_um_livro()
+            break
             
         case '5':
             estoque_de_livro()
