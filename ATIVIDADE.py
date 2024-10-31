@@ -1,3 +1,7 @@
+"""
+TURMA G93313
+ALUNOS: AMANDA ALMEIDA | GABRIEL PINTO | VINICIUS EDWARD
+"""
 def limpar_terminal():
     import os
     os.system("cls || clear")
